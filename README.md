@@ -1,6 +1,6 @@
 # CentOS Plex Dockerfile
 
-This is a Dockerfile to set up (https://plex.tv/ "Plex Media Server") - (https://plex.tv/) running on Centos7.
+This is a Dockerfile to set up "Plex Media Server" - (https://plex.tv/) running on Centos7.
 
 ## Preparation
 
