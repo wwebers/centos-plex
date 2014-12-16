@@ -17,7 +17,7 @@ docker build -t plex .
 You can also obtain it via:
 
 ```
-docker pull wwebers/dockerfiles:centos-plex
+docker pull wwebers/centos-plex
 ```
 
 Prepare your local data folders used by the container volumes:
