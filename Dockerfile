@@ -11,6 +11,7 @@ RUN yum -y install initscripts; yum clean all
 RUN rpm -Uvh https://downloads.plex.tv/plex-media-server/0.9.11.5.774-760cb52/plexmediaserver-0.9.11.5.774-760cb52.x86_64.rpm; echo 'avoiding error'
 
 VOLUME ["/config"]
+VOLUME ["/data"]
 
 ADD PlexMediaServer /etc/sysconfig/PlexMediaServer
 
