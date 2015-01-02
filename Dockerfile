@@ -7,14 +7,15 @@ RUN mkdir -p /run/lock/subsys
 # Update RPM Packages
 RUN yum -y update; yum clean all
 RUN yum -y install initscripts; yum clean all
-
 RUN rpm -Uvh https://downloads.plex.tv/plex-media-server/0.9.11.7.803-87d0708/plexmediaserver-0.9.11.7.803-87d0708.x86_64.rpm; echo 'avoiding error'
-
+RUN mkdir /config && \
+    mkdir /data && \
+    chown plex:plex /config && \
+    chown plex:plex /data 
 VOLUME ["/config"]
 VOLUME ["/data"]
 
 ADD PlexMediaServer /etc/sysconfig/PlexMediaServer
-
 ADD start.sh /start.sh
 
 EXPOSE 32400
